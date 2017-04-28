@@ -1,19 +1,30 @@
-var a = 0;
-var b= 0;
-alert("Witaj policzymy sobie coś ok ?")
-a = prompt("podaj wartosc a")
-b = prompt("podaj wartost b")
-var value = (a * a) + (2 * a * b) - (b * b);
-console.log(value);
-if(value>0) {
-	console.log("Wynik jest dodatni");
-	alert("Wynik jest dodatni");
+var a = 0,
+	h = 0,
+	wynik = 0;
+
+function getInput() {
+	a = prompt("podaj wartość a")
+	h = prompt("podaj wartosc h")
 }
-if (value<0){
-	console.log("Wynik jest ujemny");
-	alert("Wynik jest ujemny");
+
+function testDataTriangleArea(a, h){
+	if (!a>0 && !h>0) {
+		alert("Podano nieprawidłowe dane spróbuj ponownie");
+		getInput();
+	}
 }
-if (value==0) {
-	console.log ("Wynikiem jest zero");
-	alert("Wynikiem jest zero");
+
+function calculateTriangle (a,h){
+	var temp = (a*h)/2;
+	return temp;
 }
+
+function displayResults (wynik) {
+	console.log(wynik)
+	alert(wynik);
+}
+
+getInput();
+testDataTriangleArea(a, h);
+wynik = calculateTriangle(a, h);
+displayResults(wynik);

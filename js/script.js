@@ -8,9 +8,10 @@ function getInput() {
 }
 
 function testDataTriangleArea(a, h){
-	if (!a>0 && !h>0) {
+	if (a<0 || h<0) {
 		alert("Podano nieprawidłowe dane spróbuj ponownie");
-		getInput();
+		// alert(a);
+		// alert(h);
 	}
 }
 

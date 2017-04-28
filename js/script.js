@@ -28,4 +28,4 @@ function displayResults (wynik) {
 getInput();
 testDataTriangleArea(a, h);
 wynik = calculateTriangle(a, h);
-displayResults(wynik);
+displayResults(wynik); 
